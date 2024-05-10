@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Quotes</title>
+        <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6bNFB6D3qWgUuRaismcPql80NknQ7NRP5oQ&s" rel="icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    <body style="background:radial-gradient(rgb(121, 121, 235),white);">
+        <h1 style="text-align: center; font-family:Protest Revolution;">Edit this quote...</h1>
+        <form action="/edit" method="POST">
+            <input type="hidden" id="_id" name="_id" value="{{data["_id"]}}" />
+            <div style="text-align: center;">
+                        <label for="text">Quote</label> 
+                        <textarea id="text" name="text" cols="40" rows="5" style="box-shadow: 7px 7px black; border-radius: 5px;">{{data["text"]}}</textarea><br><br>
+                        <label for="author">Author</label>
+                        <input type="text" style="box-shadow: 7px 7px black; border-radius: 5px;" id="author" name="author"value="{{data["author"]}}"/><br><br>    
+        </div>
+            <div  style="text-align: center;">
+            <button type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #007bff; color: #fff; border: 2px black; border-radius: 5px; cursor: pointer;font-family: poppins; box-shadow: 7px 7px black; text-decoration: none;" >Update</button><br><br>
+            <br>
+            <button style="padding: 10px 20px; font-size: 16px; background-color: #007bff; color: #fff; border: 2px black; border-radius: 5px; cursor: pointer;font-family: poppins; box-shadow: 7px 7px black;" ><a href="/" style="text-decoration: none; color: whitesmoke;">Cancel</a></button>
+            </div>
+        </form>
+    </body>
+</html>

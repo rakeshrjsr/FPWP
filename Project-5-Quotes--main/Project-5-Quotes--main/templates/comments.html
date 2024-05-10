@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6bNFB6D3qWgUuRaismcPql80NknQ7NRP5oQ&s" rel="icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&display=swap" rel="stylesheet">
+        <title>Comment on quote</title>
+    </head>
+
+
+
+
+    <body style="background:radial-gradient(rgb(121, 121, 235),white);">
+
+        <div style="text-align: center; margin-top: 100px; ">
+        <h1>Comments</h1>
+            <br>
+            <br>
+            <br>
+        <form action="/add_comment/{{data['id']}}" method="POST">
+            <textarea name="comment_text" id ="comment_text" cols="30" rows="3"></textarea>
+            <button type="submit">Add Comment</button>
+        </form>
+        <table style="margin: auto;">
+            {% for item in data["comments"] %}
+            <tr>
+                <td>
+                    [{{item}}]
+                </td>
+                
+                <td>
+                    [
+                    <a href="/edit/{{item['_id']}}"><i class="bi bi-pencil-square"></i></a>
+                    <a href="/delete/{{item['_id']}}"><i class="bi bi-trash-fill"></i></a>
+                    
+                    ]
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+   
+
+    <a href="/quotes">Return to Quotes</a>
+        </div>
+    </body>
+</html>

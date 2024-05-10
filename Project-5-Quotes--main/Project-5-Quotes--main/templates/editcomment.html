@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Comments </title>
+    </head>
+    <body style="background:radial-gradient(rgb(121, 121, 235),white);">
+
+  
+        <h1>Edit Comment</h1>
+        <form action="/edit_comment/{{ comment_id }}" method="POST">
+            <textarea name="updated_comment_text" cols="30" rows="3">{{ comment_text }}</textarea>
+            <button type="submit">Update Comment</button>
+        </form>
+   
+      
+    
+
+
+
+
+    </body>
+</html>

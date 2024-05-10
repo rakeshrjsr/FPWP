@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <!-- Link to Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="data:image/png;base64,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" rel="icon">
+    <style>
+      .impClass{
+       font-family:'Protest Revolution';
+      }
+      .yelClass{
+       background-color: azure;
+      }
+      #app > div{
+       border: dashed black 1px;
+      }
+</style>
+    <style>
+      /* Custom CSS */
+      body {
+        background:radial-gradient(rgb(121, 121, 235),white);
+      }
+      .form-container {
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 10px 10px 5px lightblue;
+      }
+      .form-title {
+        margin-bottom: 30px;
+        font-family: Protest Revolution;
+        text-align: center;
+      }
+    </style>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-6">
+          <div class="form-container" class="impClass" v-bind:class="{yelClass: isYellow}">
+            <h1 class="form-title">Welcome to the quotes app page</h1>
+            <form action="/login" method="POST">
+              <div class="form-group">
+                <label for="user">USERID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="user"
+                  name="user"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  required
+                />
+              </div>
+              <button type="submit" style="background-color: azure; color: black; border-radius: 5px; margin-top: 5px; margin-bottom: 5px;">
+                Log In
+              </button>
+              <br />
+              <button  style="background-color: azure; border-radius: 5px; margin-top: 5px; margin-bottom: 5px;"><a href="/" style="color: black;">Cancel</a></button>
+            </form>
+            <p class="text-center mt-3">
+              New User? <a href="/register">Sign up for new account</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
+  <script>
+    const app = Vue.createApp({
+     data() {
+      return {
+       isYellow: true
+      }
+     }
+    })
+    
+    app.mount('#app')
+  
+  </script>
+  
+  </body>
+</html>
